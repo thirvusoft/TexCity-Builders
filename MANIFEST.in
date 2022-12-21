@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include texcity_builders *.css
+recursive-include texcity_builders *.csv
+recursive-include texcity_builders *.html
+recursive-include texcity_builders *.ico
+recursive-include texcity_builders *.js
+recursive-include texcity_builders *.json
+recursive-include texcity_builders *.md
+recursive-include texcity_builders *.png
+recursive-include texcity_builders *.py
+recursive-include texcity_builders *.svg
+recursive-include texcity_builders *.txt
+recursive-exclude texcity_builders *.pyc
