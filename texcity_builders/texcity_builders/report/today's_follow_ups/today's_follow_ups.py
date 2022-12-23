@@ -17,38 +17,31 @@ def get_columns():
 			'fieldtype':'Link',
 			'options':'Lead Management',
 			'label':'Lead',
-			'width':200
+			'width':240
 		},
 		{
 			'fieldname':'lead_name',
 			'fieldtype':'Data',
 			'label':'Lead Name',
-			'width':200
+			'width':240
 		},
 		{
 			'fieldname':'status',
 			'fieldtype':'Data',
 			'label':'Status',
-			'width':200
+			'width':240
 		},
 		{
 			'fieldname':'wa_number',
 			'fieldtype':'Phone',
 			'label':'Whatsapp No',
-			'width':200
+			'width':240
 		},
 		{
 			'fieldname':'plot_type',
 			'fieldtype':'Data',
 			'label':'Plot Type',
-			'width':200
-		},
-		{
-			'fieldname':'site',
-			'fieldtype':'Link',
-			'label':'Site',
-			'width':200,
-			'options':'site'
+			'width':240
 		},
 	]
 	return columns
@@ -63,7 +56,16 @@ def get_data(filters):
 	if(filters.get('site')):
 		site_filter['site'] = filters.get('site')
 
-	leads = frappe.db.get_all('Follow Ups', filters=follow_up_filter, pluck='parent')
+	all_leads = frappe.db.get_all('Follow Ups', filters=follow_up_filter, fields=['idx', 'parent'])
+	all_leads1=[]
+	for i in all_leads:
+		follow_up_filter['parent'] = i['parent']
+		
+		if(max(frappe.db.get_all('Follow Ups', filters={'parent':i['parent']}, pluck='idx')) == i['idx']):
+			all_leads1.append(i)
+
+
+	leads = [i['parent'] for i in all_leads1]
 	site_filter['parent'] = ['in', leads]
 	site_lead = frappe.db.get_all('Multiselect Site', filters=site_filter, pluck='parent')
 	lead_filter['name'] = ['in', site_lead]
