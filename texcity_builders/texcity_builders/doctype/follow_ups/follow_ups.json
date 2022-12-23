@@ -10,6 +10,7 @@
   "followed_by",
   "next_follow_up_date",
   "status",
+  "site",
   "mode_of_communication",
   "description"
  ],
@@ -46,19 +47,27 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nMessage sent\nSite visited\nBooking\nRegistration"
+   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nYet To Visit"
   },
   {
    "fieldname": "next_follow_up_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Next Follow up Date"
+  },
+  {
+   "depends_on": "eval:doc.status=='Site Visited'",
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "Site"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-12-21 18:05:33.795067",
+ "modified": "2022-12-22 15:11:53.080018",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Follow Ups",

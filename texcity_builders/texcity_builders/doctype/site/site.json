@@ -78,7 +78,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-21 17:30:34.296831",
+ "modified": "2022-12-22 10:21:00.507681",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Site",
@@ -99,6 +99,7 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "territory, plot_no, address, site_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

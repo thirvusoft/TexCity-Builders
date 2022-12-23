@@ -1,8 +1,11 @@
 # Copyright (c) 2022, Thirvusoft Private Limited and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 class LeadManagement(Document):
-	pass
+	def before_save(self):
+		if(self.mobile_no):
+			if(len(self.mobile_no.split('-')[-1]) < 1):
+				self.mobile_no = ''
