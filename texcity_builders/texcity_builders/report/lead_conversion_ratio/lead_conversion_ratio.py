@@ -31,7 +31,7 @@ def get_chart_summary(data):
 		summary.append(
 		{
 			"value":  status[i] or "Not Mentioned",
-			"label": f'''<p><span style="color:{color[i].lower()}; font-weight: bold; font-size:20px;">{i }</span></p>''',
+			"label": f'''<p><span style="color:{color.get(i).lower() if color.get(i) else ''}; font-weight: bold; font-size:20px;">{i }</span></p>''',
 			"datatype": "Float",
 		}
 		)
@@ -75,7 +75,7 @@ def get_columns():
 		},
 		{
 			'fieldname':'posting_date',
-			'label':'Created Date',
+			'label':'Creation Date',
 			'fieldtype':'Date',
 			'width':240
 		},
@@ -96,7 +96,25 @@ def get_columns():
 			'label':'Status',
 			'fieldtype':'Data',
 			'width':240
-		}
+		},
+		{
+			'fieldname':'place_of_call',
+			'label':'Place Of Call',
+			'fieldtype':'Data',
+			'width':240
+		},
+		{
+			'fieldname':'area',
+			'label':'Area(Native)',
+			'fieldtype':'Data',
+			'width':240
+		},
+		{
+			'fieldname':'channel_through',
+			'label':'Channel Through',
+			'fieldtype':'Data',
+			'width':240
+		},
 	]
 	return columns
 
@@ -109,5 +127,5 @@ def get_data(filters):
 		lead_filt['posting_date'] = ['<=', filters.get('end_date')]
 	if(filters.get('start_date') and filters.get('end_date')):
 		lead_filt['posting_date'] = ['between', (filters.get('start_date'), filters.get('end_date'))]
-	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date'], order_by = 'posting_date')
+	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'place_of_call', 'area', 'channel_through'], order_by = 'posting_date')
 	return leads
