@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2022-12-21 13:14:52.696729",
@@ -263,7 +264,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Name"
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "site_visit_tab",
@@ -330,8 +332,9 @@
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2022-12-22 17:47:36.873807",
+ "modified": "2022-12-24 12:04:29.485399",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
@@ -356,7 +359,7 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Yellow",
+   "color": "Cyan",
    "title": "Open"
   },
   {
@@ -384,7 +387,7 @@
    "title": "Booked"
   },
   {
-   "color": "Cyan",
+   "color": "Yellow",
    "title": "Registered"
   },
   {
