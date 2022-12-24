@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-21 16:32:30.633076",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "followed_by",
+  "next_follow_up_date",
+  "status",
+  "site",
+  "site_location",
+  "plot_no",
+  "remarks_tab"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "followed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Followed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Yet To Visit\nVisited\nMissed"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "fetch_from": "site.territory",
+   "fieldname": "site_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site Location",
+   "options": "Territory"
+  },
+  {
+   "fetch_from": "site.plot_no",
+   "fieldname": "plot_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plot No"
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Follow up Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-22 10:37:24.194099",
+ "modified_by": "Administrator",
+ "module": "Texcity Builders",
+ "name": "Site Visit",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

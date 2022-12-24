@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-21 17:22:26.938206",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "followed_by",
+  "next_follow_up_date",
+  "status",
+  "site",
+  "mode_of_communication",
+  "description"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "followed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Followed by",
+   "options": "User"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "mode_of_communication",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mode of Communication",
+   "options": "Mode of Communication"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nYet To Visit\nBooked\nRegistered"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Follow up Date"
+  },
+  {
+   "depends_on": "eval:doc.status=='Site Visited'",
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "Site"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-23 17:43:58.525852",
+ "modified_by": "Administrator",
+ "module": "Texcity Builders",
+ "name": "Follow Ups",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
