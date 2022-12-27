@@ -33,7 +33,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-12-24 13:41:58.621538",
+ "modified": "2022-12-27 15:12:06.007718",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Order of Lead Status",
@@ -48,6 +48,23 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Texcity Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1
   }
  ],
  "sort_field": "modified",

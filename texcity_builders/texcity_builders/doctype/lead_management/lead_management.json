@@ -333,7 +333,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2022-12-26 14:11:12.042917",
+ "modified": "2022-12-27 15:11:40.915812",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
@@ -349,6 +349,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Texcity Admin",
    "share": 1,
    "write": 1
   }
