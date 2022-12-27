@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "json": "{}",
- "modified": "2022-12-22 16:55:05.719460",
+ "modified": "2022-12-27 17:56:22.560387",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Today's Follow Ups",
@@ -22,6 +22,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Texcity Admin"
   }
  ]
 }

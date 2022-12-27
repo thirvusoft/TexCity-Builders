@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2022-12-24 10:45:54.392211",
+ "modified": "2022-12-27 17:56:13.672362",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Conversion Ratio",
@@ -21,6 +21,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Texcity Admin"
   }
  ]
 }
