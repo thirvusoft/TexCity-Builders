@@ -59,12 +59,12 @@ app_license = "MIT"
 #	"methods": "texcity_builders.utils.jinja_methods",
 #	"filters": "texcity_builders.utils.jinja_filters"
 # }
-
+after_migrate = "texcity_builders.install.after_install"
 # Installation
 # ------------
 
 # before_install = "texcity_builders.install.before_install"
-# after_install = "texcity_builders.install.after_install"
+after_install = "texcity_builders.install.after_install"
 
 # Uninstallation
 # ------------
