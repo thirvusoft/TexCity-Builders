@@ -169,7 +169,6 @@
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
-   "depends_on": "// eval: doc.request_for_site.find(element => element.site==\"Others\")",
    "fieldname": "preferred_site_location",
    "fieldtype": "Link",
    "label": "Preferred Site Location",
@@ -334,7 +333,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2022-12-24 12:32:23.848056",
+ "modified": "2022-12-26 14:11:12.042917",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
