@@ -139,5 +139,6 @@ def get_data(filters):
 		site_filt['site'] = ['in', filters.get('site')]
 	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'place_of_call', 'area', 'channel_through'], order_by = 'posting_date')
 	leads_with_sites = frappe.db.get_all('Multiselect Site', filters=site_filt, pluck='parent')
-	leads = [i for i in leads if i['name'] in leads_with_sites]
+	if(filters.get('site')):
+		leads = [i for i in leads if i['name'] in leads_with_sites]
 	return leads
