@@ -190,7 +190,7 @@
    "fieldname": "units",
    "fieldtype": "Link",
    "label": "Units",
-   "options": "UOM"
+   "options": "Unit Of Measure"
   },
   {
    "allow_in_quick_entry": 1,
@@ -333,7 +333,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2022-12-27 15:11:40.915812",
+ "modified": "2022-12-27 18:30:34.224178",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
