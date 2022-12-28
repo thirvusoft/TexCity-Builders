@@ -77,8 +77,17 @@
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-12-27 15:12:35.958752",
+ "links": [
+  {
+   "group": "CRM",
+   "is_child_table": 1,
+   "link_doctype": "Multiselect Site",
+   "link_fieldname": "site",
+   "parent_doctype": "Lead Management",
+   "table_fieldname": "request_for_site"
+  }
+ ],
+ "modified": "2022-12-28 11:53:01.066622",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Site",
@@ -112,6 +121,7 @@
  ],
  "quick_entry": 1,
  "search_fields": "territory, plot_no, address, site_name",
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

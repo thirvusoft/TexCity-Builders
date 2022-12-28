@@ -35,6 +35,13 @@ def get_chart_summary(data):
 			"datatype": "Float",
 		}
 		)
+	summary.append(
+		{
+			"value":  sum(status.values()) or 0,
+			"label": "<b style='font-size:20px;color:#ff5500'>Total Enquiry</b>",
+			"datatype": "Float",
+		}
+		)
 	return summary
 
 def get_chart_data(data):
@@ -121,11 +128,16 @@ def get_columns():
 
 def get_data(filters):
 	lead_filt = {}
+	site_filt = {}
 	if(filters.get('start_date')):
 		lead_filt['posting_date'] = ['>=', filters.get('start_date')]
 	if(filters.get('end_date')):
 		lead_filt['posting_date'] = ['<=', filters.get('end_date')]
 	if(filters.get('start_date') and filters.get('end_date')):
 		lead_filt['posting_date'] = ['between', (filters.get('start_date'), filters.get('end_date'))]
+	if(filters.get('site')):
+		site_filt['site'] = ['in', filters.get('site')]
 	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'place_of_call', 'area', 'channel_through'], order_by = 'posting_date')
+	leads_with_sites = frappe.db.get_all('Multiselect Site', filters=site_filt, pluck='parent')
+	leads = [i for i in leads if i['name'] in leads_with_sites]
 	return leads

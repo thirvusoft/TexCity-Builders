@@ -14,5 +14,16 @@ frappe.query_reports["Lead Conversion Ratio"] = {
 			label:'End Date',
 			fieldtype:'Date',
 		},
+		{
+			"fieldname":"site",
+			"label": "Site",
+			"fieldtype": "MultiSelectList",
+			"options": "Site",
+			get_data: function(txt) {
+				return frappe.db.get_link_options('Site', txt, {
+					
+				});
+			}
+		},
 	]
 };
