@@ -8,8 +8,15 @@ frappe.ui.form.on('Lead Management', {
 				filters:{ disabled:0, sold_out:0 }
 			}
 		})
-		
 	},
+	request_for_site: function(frm){
+		if(frm.doc.request_for_site.find(element => element.site=='Others')){
+			frm.set_value('site__others_checked', 1)
+		}
+		else{
+			frm.set_value('site__others_checked', 0)
+		}
+	}
 });
 
 frappe.ui.form.on('Follow Ups', {

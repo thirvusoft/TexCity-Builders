@@ -19,7 +19,26 @@ frappe.ui.form.LeadManagementQuickEntryForm = class LeadManagementQuickEntryForm
 				}
 				cur_col_brk = 0
 			}
+			if(d.fieldname=='request_for_site'){
+				d.onchange = function(){
+					if(me.dialog.fields_dict.request_for_site.value){
+					if(me.dialog.fields_dict.request_for_site.value.find(element => element.site=='Others')){
+						me.dialog.fields_dict.site__others_checked.set_value(1)
+					}
+					else{
+						me.dialog.fields_dict.site__others_checked.set_value(0)
+					}
+					me.dialog.refresh()
+				}
+				}
+			}
+			if(d.fieldname=='site__others_checked'){
+				d.onchange = function(){
+					me.dialog.refresh()
+				}
+			}
 		})
+		
 		this.dialog = new frappe.ui.Dialog({
 			title: __("New {0}", [__(this.doctype)]),
 			fields: this.mandatory,
