@@ -16,7 +16,8 @@
   "column_break_6",
   "disabled",
   "sold_out",
-  "google_contact"
+  "google_contact",
+  "as"
  ],
  "fields": [
   {
@@ -82,6 +83,12 @@
    "fieldtype": "Table MultiSelect",
    "label": "Google Contact",
    "options": "Multiselect Google Contacts"
+  },
+  {
+   "fieldname": "as",
+   "fieldtype": "Table",
+   "label": "as",
+   "options": "Multiselect Google Contacts"
   }
  ],
  "image_field": "image",
@@ -96,7 +103,7 @@
    "table_fieldname": "request_for_site"
   }
  ],
- "modified": "2022-12-28 17:47:21.298176",
+ "modified": "2022-12-28 19:16:46.902566",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Site",
