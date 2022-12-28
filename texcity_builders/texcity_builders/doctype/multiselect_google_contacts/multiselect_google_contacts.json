@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-28 17:46:57.441597",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "google_contacts"
+ ],
+ "fields": [
+  {
+   "fieldname": "google_contacts",
+   "fieldtype": "Link",
+   "label": "Google Contacts",
+   "options": "Google Contacts"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-28 17:46:57.441597",
+ "modified_by": "Administrator",
+ "module": "Texcity Builders",
+ "name": "Multiselect Google Contacts",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
