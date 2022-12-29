@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"chart\",\"data\":{\"chart_name\":\"Lead Conversion Count\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Management\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Site\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Management\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Site\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contact\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Google Contacts\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2022-12-27 14:54:38.062414",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -139,7 +139,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-12-27 15:05:54.170611",
+ "modified": "2022-12-29 11:04:00.333352",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Texcity CRM",
@@ -151,6 +151,22 @@
  "roles": [],
  "sequence_id": 25.1,
  "shortcuts": [
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "format": "{} Enabled",
+   "label": "Google Contacts",
+   "link_to": "Google Contacts",
+   "stats_filter": "{\"enable\":[\"=\",1]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Contact",
+   "link_to": "Contact",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",

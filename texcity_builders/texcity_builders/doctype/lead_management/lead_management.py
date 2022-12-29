@@ -16,12 +16,12 @@ class LeadManagement(Document):
 			if(len(self.mobile_no.split('-')[-1]) < 1):
 				self.mobile_no = ''
 	def validate(self):
-		frappe.enqueue(self.create_contact, queue='long')
-		# self.create_contact()
 		if(len(self.follow_ups)>0):
 			status = self.follow_ups[-1].get('status')
 			if(status):
 				self.status = status
+	def after_insert(self):
+		frappe.enqueue(self.create_contact, queue='long')
 
 	def create_contact(self, is_new_contact=1):
 		try:
@@ -37,18 +37,21 @@ class LeadManagement(Document):
 			}]
 			if(self.whatsapp_no):
 				wa_no = str(self.whatsapp_no).split('-')
-				phone.append({'phone':wa_no[-1] if len(wa_no)>0 else self.whatsapp_no, 'is_primary_phone':1, 'is_primary_mobile_no':1})
+				if len(wa_no)>1:
+					phone.append({'phone':wa_no[-1] if len(wa_no)>0 else self.whatsapp_no, 'is_primary_phone':1, 'is_primary_mobile_no':1})
 			if(self.mobile_no):
 				ph_no = str(self.mobile_no).split('-')
-				phone.append({'phone':ph_no[-1] if len(ph_no)>0 else self.mobile_no})
+				if len(ph_no)>1:
+					phone.append({'phone':ph_no[-1] if len(ph_no)>0 else self.mobile_no})
 			if(self.email):
-				email.append({'email_id':self.email, 'is_primary':1})
+				email.append({'email_id':self.email, 'is_primary':1} )
 			contact.update({
 				'first_name':self.lead_name,
 				'email_ids':email,
 				'phone_nos':phone,
 				'links':links
 			})
+			contact.flags.ignore_validate = True
 			contact.save()
 			contact.reload()
 			contact_name = contact.name
@@ -73,10 +76,11 @@ class LeadManagement(Document):
 				})
 			contact.run_post_save_methods = lambda **args:0
 			contact.insert = lambda **args:0
+			contact.flags.ignore_validate = True
 			contact.save()
-			frappe.log_error(message=f"Contact Synced Successfully for {self.name}", title=f'G-Contact Synced Successfully')
+			frappe.log_error(message=f"Contact {'Synced Successfully for '+ self.name if len(google_contacts) else 'Not Synced '+ self.name}", title=f'G-Contact {"Synced Successfully" if len(google_contacts) else "Sync Disabled or No Contact is mentioned for those sites"}')
 		except Exception as e:
-			frappe.log_error(message=e, title=f'Google Contact Sync Error {self.name}')
+			frappe.log_error(message=f'{e}\n\n\n<b>DOC:</b>\n{frappe.as_json(contact)}\n\n\n<b>Traceback:</b>\n{frappe.get_traceback()}', title=f'Google Contact Sync Error {self.name}')
 
 	def get_google_contact_for_site(self, request_for_site=[]):
 		site = []
@@ -154,3 +158,8 @@ class LeadManagement(Document):
 			)
 			return False
 
+	def on_trash(self):
+		if(frappe.db.exists('Dynamic Link', {'link_doctype':'Lead Management', 'link_name':self.name, 'parenttype': "Contact"})):
+				contact_name = frappe.db.get_all('Dynamic Link', filters={'link_doctype':'Lead Management', 'link_name':self.name, 'parenttype': "Contact"}, pluck = 'parent')
+				for i in contact_name:
+					frappe.delete_doc('Contact', i)
