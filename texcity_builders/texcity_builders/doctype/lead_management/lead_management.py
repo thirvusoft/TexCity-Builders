@@ -16,6 +16,8 @@ class LeadManagement(Document):
 			if(len(self.mobile_no.split('-')[-1]) < 1):
 				self.mobile_no = ''
 	def validate(self):
+		if(not self.is_new()):
+			frappe.enqueue(self.create_contact, queue='long')
 		if(len(self.follow_ups)>0):
 			status = self.follow_ups[-1].get('status')
 			if(status):
