@@ -86,7 +86,7 @@ def get_columns(hide_preferred_site_location=1):
 			'fieldname':'posting_date',
 			'label':'Creation Date',
 			'fieldtype':'Date',
-			'width':240
+			'width':150
 		},
 		{
 			'fieldname':'lead_name',
@@ -98,7 +98,13 @@ def get_columns(hide_preferred_site_location=1):
 			'fieldname':'whatsapp_no',
 			'label':'WhatsApp No',
 			'fieldtype':'Data',
-			'width':240
+			'width':200
+		},
+		{
+			'fieldname':'lead_owner',
+			'label':'Lead Owner',
+			'fieldtype':'Data',
+			'width':200,
 		},
 		{
 			'fieldname':'site',
@@ -118,7 +124,7 @@ def get_columns(hide_preferred_site_location=1):
 			'fieldname':'status',
 			'label':'Status',
 			'fieldtype':'Data',
-			'width':240
+			'width':150
 		},
 		{
 			'fieldname':'area',
@@ -130,14 +136,14 @@ def get_columns(hide_preferred_site_location=1):
 			'fieldname':'preferred_site_location',
 			'label':'Preferred Site Location',
 			'fieldtype':'Data',
-			'width':240,
+			'width':200,
 			'hidden':hide_preferred_site_location
 		},
 		{
 			'fieldname':'channel_through',
 			'label':'Channel Through',
 			'fieldtype':'Data',
-			'width':240
+			'width':200
 		},
 	]
 	return columns
@@ -154,7 +160,7 @@ def get_data(filters):
 		lead_filt['posting_date'] = ['between', (filters.get('start_date'), filters.get('end_date'))]
 	if(filters.get('site')):
 		site_filt['site'] =  filters.get('site')
-	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'area', 'channel_through', 'preferred_site_location'], order_by = 'posting_date')
+	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'area', 'channel_through', 'preferred_site_location', 'lead_owner'], order_by = 'posting_date')
 	leads_with_sites = frappe.db.get_all('Multiselect Site', filters=site_filt, pluck='parent')
 	if(filters.get('site')):
 		leads = [i for i in leads if i['name'] in leads_with_sites]

@@ -14,6 +14,7 @@
   "image",
   "posting_date",
   "lead_name",
+  "lead_owner",
   "mobile_no",
   "whatsapp_no",
   "column_break_6",
@@ -335,13 +336,20 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "Site  Others Checked"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "lead_owner",
+   "fieldtype": "Link",
+   "label": "Lead Owner",
+   "options": "Users List"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-01-06 10:45:04.162267",
+ "modified": "2023-01-06 15:29:12.849533",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
