@@ -74,7 +74,6 @@ def get_chart_data(data):
 	return chart_data
 
 def get_columns(hide_preferred_site_location=1):
-	frappe.errprint(hide_preferred_site_location)
 	columns = [
 		{
 			'fieldname':'name',
