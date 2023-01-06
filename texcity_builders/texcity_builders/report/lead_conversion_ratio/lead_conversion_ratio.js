@@ -17,13 +17,8 @@ frappe.query_reports["Lead Conversion Ratio"] = {
 		{
 			"fieldname":"site",
 			"label": "Site",
-			"fieldtype": "MultiSelectList",
+			"fieldtype": "Link",
 			"options": "Site",
-			get_data: function(txt) {
-				return frappe.db.get_link_options('Site', txt, {
-					
-				});
-			}
 		},
 	]
 };

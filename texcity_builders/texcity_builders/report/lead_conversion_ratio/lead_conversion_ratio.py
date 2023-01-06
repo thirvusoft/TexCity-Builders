@@ -7,7 +7,7 @@ from collections import OrderedDict
 
 def execute(filters={},hide_preferred_site_location=1):
 	if(filters.get('site')):
-		if('Others' in filters.get('site')):hide_preferred_site_location=0
+		if(filters.get('site') == 'Others'):hide_preferred_site_location=0
 	columns, data = get_columns(hide_preferred_site_location) or [], get_data(filters) or []
 	chart_summary = get_chart_summary(data)
 	chart_data = get_chart_data(data)
@@ -109,14 +109,15 @@ def get_columns(hide_preferred_site_location=1):
 			'length':1000
 		},
 		{
-			'fieldname':'status',
-			'label':'Status',
+			'fieldname':'description',
+			'label':'Description (Last Follow Up)',
 			'fieldtype':'Data',
-			'width':240
+			'width':240,
+			'length':1000
 		},
 		{
-			'fieldname':'place_of_call',
-			'label':'Place Of Call',
+			'fieldname':'status',
+			'label':'Status',
 			'fieldtype':'Data',
 			'width':240
 		},
@@ -153,11 +154,12 @@ def get_data(filters):
 	if(filters.get('start_date') and filters.get('end_date')):
 		lead_filt['posting_date'] = ['between', (filters.get('start_date'), filters.get('end_date'))]
 	if(filters.get('site')):
-		site_filt['site'] = ['in', filters.get('site')]
-	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'place_of_call', 'area', 'channel_through', 'preferred_site_location'], order_by = 'posting_date')
+		site_filt['site'] =  filters.get('site')
+	leads = frappe.db.get_all('Lead Management', filters=lead_filt, fields=['name', 'lead_name', 'whatsapp_no', 'status', 'posting_date', 'area', 'channel_through', 'preferred_site_location'], order_by = 'posting_date')
 	leads_with_sites = frappe.db.get_all('Multiselect Site', filters=site_filt, pluck='parent')
 	if(filters.get('site')):
 		leads = [i for i in leads if i['name'] in leads_with_sites]
 	for i in leads:
 		i['site'] = ', '.join(frappe.db.get_all('Multiselect Site', filters={'parent':i['name']}, pluck='site'))
+		i['description'] = frappe.db.get_value('Follow Ups', {'parent':i['name']}, 'description', order_by='idx desc')
 	return leads
