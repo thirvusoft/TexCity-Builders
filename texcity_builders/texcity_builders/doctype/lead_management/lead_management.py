@@ -38,9 +38,7 @@ class LeadManagement(Document):
 				'link_doctype':'Lead Management', 'link_name':self.name, 'parenttype':'Contact'
 			}]
 			if(self.whatsapp_no):
-				wa_no = str(self.whatsapp_no).split('-')
-				if len(wa_no)>1:
-					phone.append({'phone':wa_no[-1] if len(wa_no)>0 else self.whatsapp_no, 'is_primary_phone':1, 'is_primary_mobile_no':1})
+				phone.append({'phone':self.whatsapp_no, 'is_primary_phone':1, 'is_primary_mobile_no':1})
 			if(self.mobile_no):
 				ph_no = str(self.mobile_no).split('-')
 				if len(ph_no)>1:

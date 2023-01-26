@@ -113,7 +113,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 2,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -137,9 +137,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Followed Leads",
+   "link_count": 0,
+   "link_to": "Followed Leads",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-12-29 11:04:00.333352",
+ "modified": "2023-01-26 17:49:49.176437",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Texcity CRM",

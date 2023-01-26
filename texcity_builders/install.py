@@ -1,9 +1,11 @@
 import frappe
 from frappe.custom.doctype.property_setter.property_setter import make_property_setter
+from frappe.custom.doctype.custom_field.custom_field import create_custom_field
 
 
 def after_install():
     create_property_setters()
+    make_custom_fields()
     create_default_site()
     create_roles()
     create_lead_types()
@@ -14,6 +16,20 @@ def create_property_setters():
     make_property_setter('Territory', 'territory_name', 'allow_in_quick_entry', 1, 'Check')
     make_property_setter('Territory', 'territory_name', 'bold', 1, 'Check')
 
+def make_custom_fields():
+    df = {
+        'Contact':[
+            {
+                'fieldname':'from_lead',
+                'label':'From Lead',
+                'read_only':1,
+                'default':0,
+                'fieldtype':'Check',
+                'insert_after':'sync_with_google_contacts'
+            }
+        ]
+    }
+    create_custom_field(df)
 def create_roles():
     if(not frappe.db.exists('Role', 'Texcity Admin')):
         doc = frappe.new_doc('Role')
