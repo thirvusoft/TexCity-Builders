@@ -18,18 +18,28 @@ def create_property_setters():
 
 def make_custom_fields():
     df = {
-        'Contact':[
-            {
-                'fieldname':'from_lead',
-                'label':'From Lead',
-                'read_only':1,
-                'default':0,
-                'fieldtype':'Check',
-                'insert_after':'sync_with_google_contacts'
-            }
-        ]
-    }
-    create_custom_field(df)
+            'fieldname':'from_lead',
+            'label':'From Lead',
+            'read_only':1,
+            'default':0,
+            'fieldtype':'Check',
+            'insert_after':'sync_with_google_contacts',
+            'no_copy':1
+        }
+    create_custom_field('Contact', df)
+    df = {
+            'fieldname':'lead_created',
+            'label':'Lead Created',
+            'read_only':1,
+            'default':0,
+            'fieldtype':'Check',
+            'insert_after':'from_lead',
+            'in_standard_filter':1,
+            'in_list_view':1,
+            'no_copy':1
+        }
+    create_custom_field('Contact', df)
+
 def create_roles():
     if(not frappe.db.exists('Role', 'Texcity Admin')):
         doc = frappe.new_doc('Role')

@@ -26,12 +26,19 @@ class LeadManagement(Document):
 		frappe.enqueue(self.create_contact, queue='long')
 
 	def create_contact(self, is_new_contact=1):
+		if(self.from_contact):
+			return
 		try:
 			contact = frappe.new_doc('Contact')
 			if(frappe.db.exists('Dynamic Link', {'link_doctype':'Lead Management', 'link_name':self.name, 'parenttype': "Contact"})):
 				contact_name = frappe.db.get_value('Dynamic Link', {'link_doctype':'Lead Management', 'link_name':self.name, 'parenttype': "Contact"}, 'parent')
 				contact = frappe.get_doc('Contact', contact_name)
 				is_new_contact = 0
+			contact.update({
+				'from_lead':1,
+				'lead_created':1,
+				'is_primary_contact':1
+			})
 			email = []
 			phone = []
 			links = [{
@@ -51,7 +58,7 @@ class LeadManagement(Document):
 				'phone_nos':phone,
 				'links':links
 			})
-			contact.flags.ignore_validate = True
+			# contact.flags.ignore_validate = True
 			contact.save()
 			contact.reload()
 			contact_name = contact.name
