@@ -52,7 +52,7 @@ def get_data(filters):
 	site_filter = {'parenttype':'Lead Management'}
 	lead_filter = {'status':['not in', ['Do Not Contact']]}
 	if(filters.get('follow_date')):
-		follow_up_filter['next_follow_up_date'] = filters.get('follow_date')
+		follow_up_filter['date'] = filters.get('follow_date')
 	if(filters.get('site')):
 		site_filter['site'] = filters.get('site')
 

@@ -115,10 +115,11 @@ after_install = "texcity_builders.install.after_install"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"texcity_builders.tasks.all"
-#	],
+scheduler_events = {
+	"all": [
+		"frappe.integrations.doctype.google_contacts.google_contacts.sync"
+	],
+}
 #	"daily": [
 #		"texcity_builders.tasks.daily"
 #	],
