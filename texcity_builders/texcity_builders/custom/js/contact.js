@@ -11,8 +11,25 @@ frappe.ui.form.on('Contact',{
                     phone = frm.doc.phone_nos[0].phone || "";
                 }
                 if(phone.includes('+')){
-                    country_code=phone.split('-')[0];
-                    phone = phone.split('-')[1] || '';
+                    if(phone.includes('-')){
+                        country_code=phone.split('-')[0];
+                        phone = phone.split('-')[1] || '';
+                    }
+                    else if(phone.includes(' ')){
+                        country_code=phone.split(' ')[0];
+                        phone = phone.split(' ').slice(1).join('') || '';
+                    }
+                    else{
+                        console.log(phone.split('+91'))
+                        country_code='+91';
+                        phone = phone.split('+91').length>1?phone.split('+91')[1] : ''; 
+                        console.log(phone, phone.split('+91')[1])
+                    }
+                    
+                }
+                else if(phone.includes(' ')){
+                    country_code='+91';
+                    phone = phone.split(' ').join('') || '';
                 }
                 doc.lead_name=frm.doc.first_name || "";
                 doc.mobile_no = (country_code.trim() || '+91') + '- '+ phone.trim();
