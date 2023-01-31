@@ -54,8 +54,7 @@
   {
    "fieldname": "client_details_tab",
    "fieldtype": "Tab Break",
-   "label": "Client Details",
-   "show_colour": 1
+   "label": "Client Details"
   },
   {
    "allow_in_quick_entry": 1,
@@ -64,8 +63,7 @@
    "fieldname": "mobile_no",
    "fieldtype": "Phone",
    "in_list_view": 1,
-   "label": "Mobile No",
-   "show_colour": 1
+   "label": "Mobile No"
   },
   {
    "allow_in_quick_entry": 1,
@@ -75,8 +73,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "WhatsApp No",
-   "reqd": 1,
-   "show_colour": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -86,7 +83,6 @@
    "hidden": 1,
    "label": "Series",
    "options": "CRM-LEAD-.YYYY.-",
-   "show_colour": 1,
    "width": "0"
   },
   {
@@ -94,8 +90,7 @@
    "bold": 1,
    "fieldname": "place_of_call",
    "fieldtype": "Data",
-   "label": "Place of Call",
-   "show_colour": 1
+   "label": "Place of Call"
   },
   {
    "allow_in_quick_entry": 1,
@@ -103,8 +98,7 @@
    "fieldname": "area",
    "fieldtype": "Data",
    "label": "Area(Native)",
-   "reqd": 1,
-   "show_colour": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -113,8 +107,7 @@
    "fieldtype": "Link",
    "label": "Channel Through",
    "options": "Lead Source",
-   "reqd": 1,
-   "show_colour": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -122,8 +115,7 @@
    "depends_on": "eval:doc.channel_through!='Campaign'",
    "fieldname": "referred_by",
    "fieldtype": "Data",
-   "label": "Referred By",
-   "show_colour": 1
+   "label": "Referred By"
   },
   {
    "allow_in_quick_entry": 1,
@@ -131,8 +123,7 @@
    "fieldname": "lead_type",
    "fieldtype": "Link",
    "label": "Referral Type",
-   "options": "Lead Type",
-   "show_colour": 1
+   "options": "Lead Type"
   },
   {
    "allow_in_quick_entry": 1,
@@ -140,8 +131,7 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email",
-   "show_colour": 1
+   "options": "Email"
   },
   {
    "allow_in_quick_entry": 1,
@@ -150,8 +140,7 @@
    "fieldname": "campaign_name",
    "fieldtype": "Link",
    "label": "Campaign Name",
-   "options": "Campaign",
-   "show_colour": 1
+   "options": "Campaign"
   },
   {
    "allow_in_quick_entry": 1,
@@ -162,16 +151,14 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nPhone Enquiry\nSite Visited\nRe Follow Up",
-   "show_colour": 1
+   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nPhone Enquiry\nSite Visited\nRe Follow Up"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "client_requirements_section",
    "fieldtype": "Section Break",
-   "label": "Client Requirements",
-   "show_colour": 1
+   "label": "Client Requirements"
   },
   {
    "allow_in_quick_entry": 1,
@@ -179,8 +166,7 @@
    "fieldname": "facing",
    "fieldtype": "Select",
    "label": "Facing",
-   "options": "E\nW\nN\nS\nNE\nSE\nNW\nSW",
-   "show_colour": 1
+   "options": "E\nW\nN\nS\nNE\nSE\nNW\nSW"
   },
   {
    "allow_in_quick_entry": 1,
@@ -188,8 +174,7 @@
    "depends_on": "eval:doc.site__others_checked == 1;",
    "fieldname": "preferred_site_location",
    "fieldtype": "Data",
-   "label": "Preferred Site Location",
-   "show_colour": 1
+   "label": "Preferred Site Location"
   },
   {
    "allow_in_quick_entry": 1,
@@ -197,8 +182,7 @@
    "depends_on": "eval:doc.plot_type == 'Land Only'",
    "fieldname": "required_area",
    "fieldtype": "Float",
-   "label": "Required Area",
-   "show_colour": 1
+   "label": "Required Area"
   },
   {
    "allow_in_quick_entry": 1,
@@ -208,8 +192,7 @@
    "fieldname": "units",
    "fieldtype": "Link",
    "label": "Units",
-   "options": "Unit Of Measure",
-   "show_colour": 1
+   "options": "Unit Of Measure"
   },
   {
    "allow_in_quick_entry": 1,
@@ -219,8 +202,7 @@
    "fieldname": "bhk",
    "fieldtype": "Select",
    "label": "BHK",
-   "options": "0\n1\n2\n3\n4\n5",
-   "show_colour": 1
+   "options": "0\n1\n2\n3\n4\n5"
   },
   {
    "allow_in_quick_entry": 1,
@@ -228,8 +210,7 @@
    "fieldname": "plot_type",
    "fieldtype": "Link",
    "label": "Plot Type",
-   "options": "Plot Type",
-   "show_colour": 1
+   "options": "Plot Type"
   },
   {
    "allow_in_quick_entry": 1,
@@ -237,52 +218,45 @@
    "fieldname": "payment_type",
    "fieldtype": "Select",
    "label": "Payment Type",
-   "options": "Loan\nReady Cash",
-   "show_colour": 1
+   "options": "Loan\nReady Cash"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "expected_budget",
    "fieldtype": "Currency",
-   "label": "Expected Budget",
-   "show_colour": 1
+   "label": "Expected Budget"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks",
-   "show_colour": 1
+   "label": "Remarks"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "column_break_6",
-   "fieldtype": "Column Break",
-   "show_colour": 1
+   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "column_break_14",
-   "fieldtype": "Column Break",
-   "show_colour": 1
+   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "column_break_23",
-   "fieldtype": "Column Break",
-   "show_colour": 1
+   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "column_break_25",
-   "fieldtype": "Column Break",
-   "show_colour": 1
+   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
@@ -292,42 +266,36 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Name",
-   "reqd": 1,
-   "show_colour": 1
+   "reqd": 1
   },
   {
    "fieldname": "site_visit_tab",
    "fieldtype": "Tab Break",
    "hidden": 1,
-   "label": "Site Visit",
-   "show_colour": 1
+   "label": "Site Visit"
   },
   {
    "fieldname": "site_visit",
    "fieldtype": "Table",
    "label": "Site Visit",
-   "options": "Site Visit",
-   "show_colour": 1
+   "options": "Site Visit"
   },
   {
    "fieldname": "follows_tab",
    "fieldtype": "Tab Break",
-   "label": "Follows",
-   "show_colour": 1
+   "label": "Follows"
   },
   {
    "fieldname": "follow_ups",
    "fieldtype": "Table",
    "label": "Follow Ups",
-   "options": "Follow Ups",
-   "show_colour": 1
+   "options": "Follow Ups"
   },
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
    "hidden": 1,
-   "label": "Attach Image",
-   "show_colour": 1
+   "label": "Attach Image"
   },
   {
    "allow_in_quick_entry": 1,
@@ -335,8 +303,7 @@
    "fieldname": "request_for_site",
    "fieldtype": "Table MultiSelect",
    "label": "Site Name",
-   "options": "Multiselect Site",
-   "show_colour": 1
+   "options": "Multiselect Site"
   },
   {
    "default": "Today",
@@ -345,8 +312,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Posting Date",
-   "reqd": 1,
-   "show_colour": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -354,8 +320,7 @@
    "depends_on": "eval:in_list(['Land With Building', 'Ready To Occupy'], doc.plot_type)",
    "fieldname": "land_areacent",
    "fieldtype": "Float",
-   "label": "Land Area(Cent)",
-   "show_colour": 1
+   "label": "Land Area(Cent)"
   },
   {
    "allow_in_quick_entry": 1,
@@ -363,8 +328,7 @@
    "depends_on": "eval:in_list(['Land With Building', 'Ready To Occupy'], doc.plot_type)",
    "fieldname": "building_areasqft",
    "fieldtype": "Float",
-   "label": "Building area(SQFT)",
-   "show_colour": 1
+   "label": "Building area(SQFT)"
   },
   {
    "allow_in_quick_entry": 1,
@@ -373,16 +337,14 @@
    "fieldname": "site__others_checked",
    "fieldtype": "Check",
    "hidden": 1,
-   "label": "Site  Others Checked",
-   "show_colour": 1
+   "label": "Site  Others Checked"
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "lead_owner",
    "fieldtype": "Link",
    "label": "Lead Owner",
-   "options": "Users List",
-   "show_colour": 1
+   "options": "Users List"
   },
   {
    "default": "0",
@@ -390,22 +352,20 @@
    "fieldtype": "Check",
    "label": "From Contact",
    "no_copy": 1,
-   "read_only": 1,
-   "show_colour": 1
+   "read_only": 1
   },
   {
    "fieldname": "contact",
    "fieldtype": "Data",
    "label": "Contact",
-   "no_copy": 1,
-   "show_colour": 1
+   "no_copy": 1
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-01-27 11:08:57.810676",
+ "modified": "2023-01-30 17:49:42.120392",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
@@ -438,6 +398,7 @@
   }
  ],
  "quick_entry": 1,
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

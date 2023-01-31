@@ -52,22 +52,24 @@ def get_data(filters):
 	site_filter = {'parenttype':'Lead Management'}
 	lead_filter = {'status':['not in', ['Do Not Contact']]}
 	if(filters.get('follow_date')):
-		follow_up_filter['next_follow_up_date'] = filters.get('follow_date')
+		follow_up_filter['date'] = filters.get('follow_date')
 	if(filters.get('site')):
 		site_filter['site'] = filters.get('site')
 
-	all_leads = frappe.db.get_all('Follow Ups', filters=follow_up_filter, fields=['idx', 'parent'])
-	all_leads1=[]
-	for i in all_leads:
-		follow_up_filter['parent'] = i['parent']
+	all_leads1 = frappe.db.get_all('Follow Ups', filters=follow_up_filter, fields=['idx', 'parent'])
+	# all_leads1=[]
+	# for i in all_leads:
+	# 	follow_up_filter['parent'] = i['parent']
 		
-		if(max(frappe.db.get_all('Follow Ups', filters={'parent':i['parent']}, pluck='idx')) != i['idx']):
-			all_leads1.append(i)
+	# 	if(max(frappe.db.get_all('Follow Ups', filters={'parent':i['parent']}, pluck='idx')) != i['idx']):
+	# 		all_leads1.append(i)
 
 
 	leads = [i['parent'] for i in all_leads1]
 	site_filter['parent'] = ['in', leads]
-	site_lead = frappe.db.get_all('Multiselect Site', filters=site_filter, pluck='parent')
+	site_lead=leads
+	if(filters.get('site')):
+		site_lead = frappe.db.get_all('Multiselect Site', filters=site_filter, pluck='parent')
 	lead_filter['name'] = ['in', site_lead]
 
 	leads = frappe.db.get_all('Lead Management', filters=lead_filter, fields=['name', 'lead_name', 'whatsapp_no as wa_number', 'status', 'plot_type'])

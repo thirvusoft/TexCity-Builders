@@ -67,7 +67,9 @@ def get_data(filters):
 
 	leads = [i['parent'] for i in all_leads1]
 	site_filter['parent'] = ['in', leads]
-	site_lead = frappe.db.get_all('Multiselect Site', filters=site_filter, pluck='parent')
+	site_lead=leads
+	if(filters.get('site')):
+		site_lead = frappe.db.get_all('Multiselect Site', filters=site_filter, pluck='parent')
 	lead_filter['name'] = ['in', site_lead]
 
 	leads = frappe.db.get_all('Lead Management', filters=lead_filter, fields=['name', 'lead_name', 'whatsapp_no as wa_number', 'status', 'plot_type'])
