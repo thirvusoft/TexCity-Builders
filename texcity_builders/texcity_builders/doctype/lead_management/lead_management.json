@@ -57,13 +57,15 @@
    "label": "Client Details"
   },
   {
-   "allow_in_quick_entry": 1,
    "bold": 1,
    "default": "+91-",
    "fieldname": "mobile_no",
    "fieldtype": "Phone",
+   "hidden": 1,
    "in_list_view": 1,
-   "label": "Mobile No"
+   "label": "Mobile No",
+   "print_hide": 1,
+   "report_hide": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -365,7 +367,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-01-30 17:49:42.120392",
+ "modified": "2023-01-31 12:33:43.898029",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
