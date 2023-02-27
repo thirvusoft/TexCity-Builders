@@ -43,6 +43,14 @@ def get_columns():
 			'label':'Plot Type',
 			'width':240
 		},
+		{
+			'fieldname':'for_number_card',
+			'fieldtype':'Float',
+			'label':'For Number Card',
+			'width':1,
+			'hidden':1,
+			'default':1
+		}
 	]
 	return columns
 
@@ -73,5 +81,6 @@ def get_data(filters):
 	lead_filter['name'] = ['in', site_lead]
 
 	leads = frappe.db.get_all('Lead Management', filters=lead_filter, fields=['name', 'lead_name', 'whatsapp_no as wa_number', 'status', 'plot_type'])
-	
+	for i in leads:
+		i['for_number_card'] = 1
 	return leads
