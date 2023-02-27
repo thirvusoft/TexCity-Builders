@@ -47,7 +47,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nYet To Visit\nBooked\nRegistered"
+   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nNo Response\nYet To Visit\nBooked\nRegistered"
   },
   {
    "fieldname": "next_follow_up_date",
@@ -68,7 +68,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-01-27 12:12:39.438773",
+ "modified": "2023-02-18 12:40:42.047843",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Follow Ups",

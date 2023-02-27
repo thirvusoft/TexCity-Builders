@@ -65,7 +65,7 @@ def get_chart_data(data):
 	chart_data = {
 		"data": {
 			"labels": labels,
-			"datasets": [{"name": "Expected Qty", "values": values}],
+			"datasets": [{"name": "Lead Count", "values": values}],
 		},
 		"type": "line",
 		'colors':['green', 'blue'],

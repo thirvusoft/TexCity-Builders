@@ -1,0 +1,61 @@
+{
+ "cards": [
+  {
+   "card": "Today New Lead"
+  },
+  {
+   "card": "Today Followed"
+  },
+  {
+   "card": "Site"
+  },
+  {
+   "card": "This Week followup"
+  },
+  {
+   "card": "test"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "New Incoming Leads",
+   "width": "Full"
+  },
+  {
+   "chart": "Channel",
+   "width": "Half"
+  },
+  {
+   "chart": "Lead Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Lead Owner",
+   "width": "Half"
+  },
+  {
+   "chart": "Facing",
+   "width": "Half"
+  },
+  {
+   "chart": "Plot type",
+   "width": "Half"
+  },
+  {
+   "chart": "Payment type",
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-02-27 10:42:40.588964",
+ "dashboard_name": "Owner Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-02-27 15:02:34.168042",
+ "modified_by": "Administrator",
+ "module": "Texcity Builders",
+ "name": "Owner Dashboard",
+ "owner": "Administrator"
+}

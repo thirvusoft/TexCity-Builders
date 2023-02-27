@@ -153,7 +153,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nPhone Enquiry\nSite Visited\nRe Follow Up"
+   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nNo Response\nPhone Enquiry\nSite Visited\nRe Follow Up"
   },
   {
    "allow_in_quick_entry": 1,
@@ -220,7 +220,7 @@
    "fieldname": "payment_type",
    "fieldtype": "Select",
    "label": "Payment Type",
-   "options": "Loan\nReady Cash"
+   "options": "\nLoan\nReady Cash"
   },
   {
    "allow_in_quick_entry": 1,
@@ -305,7 +305,8 @@
    "fieldname": "request_for_site",
    "fieldtype": "Table MultiSelect",
    "label": "Site Name",
-   "options": "Multiselect Site"
+   "options": "Multiselect Site",
+   "reqd": 1
   },
   {
    "default": "Today",
@@ -367,7 +368,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-01-31 12:33:43.898029",
+ "modified": "2023-02-27 15:04:24.200631",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
