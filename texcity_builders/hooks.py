@@ -11,7 +11,7 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/texcity_builders/css/texcity_builders.css"
+app_include_css = "/assets/texcity_builders/css/texcity_builders.css"
 app_include_js = ["assets/texcity_builders/js/lead_management_quick_entry.js", "assets/texcity_builders/js/desk.js"]
 
 # include js, css files in header of web template

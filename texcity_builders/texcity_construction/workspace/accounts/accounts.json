@@ -1,0 +1,201 @@
+{
+ "charts": [
+  {
+   "chart_name": "Profit and Loss",
+   "label": "Profit and Loss"
+  }
+ ],
+ "content": "[{\"id\":\"_OD8Lx1Wlu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Profit and Loss\",\"col\":12}},{\"id\":\"NP26R_G5Io\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Accounts</span>\",\"col\":12}},{\"id\":\"F84qa0Fdet\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"aHlNBbGp_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"u0fM7lfffH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chart Of Account\",\"col\":3}},{\"id\":\"9i8TlUyyE4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Payable\",\"col\":3}},{\"id\":\"YjoTCQZbK_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Receivable\",\"col\":3}},{\"id\":\"Xn26nTFx5C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"General Ledger\",\"col\":3}},{\"id\":\"ltlWZkSKsX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"xl6MXsurie\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales GST Reports\",\"col\":4}},{\"id\":\"uDTz0xTvCc\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase GST Reports\",\"col\":4}},{\"id\":\"UwV_D4f0jM\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Statements\",\"col\":4}}]",
+ "creation": "2023-08-29 12:05:02.601156",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "money-coins-1",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Accounts",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Financial Statements",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Profit and Loss Statement",
+   "link_count": 0,
+   "link_to": "Profit and Loss Statement",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Trial Balance",
+   "link_count": 0,
+   "link_to": "Trial Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Balance Sheet",
+   "link_count": 0,
+   "link_to": "Balance Sheet",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Cash Flow",
+   "link_count": 0,
+   "link_to": "Cash Flow",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales GST Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "GSTR-1",
+   "link_count": 0,
+   "link_to": "GSTR-1",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Register",
+   "link_count": 0,
+   "link_to": "Sales Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item-wise Sales Register",
+   "link_count": 0,
+   "link_to": "Item-wise Sales Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "HSN-wise-summary of outward supplies",
+   "link_count": 0,
+   "link_to": "HSN-wise-summary of outward supplies",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase GST Reports",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Purchase Register",
+   "link_count": 0,
+   "link_to": "Purchase Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Item-wise Purchase Register",
+   "link_count": 0,
+   "link_to": "Item-wise Purchase Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-08-30 17:15:46.027735",
+ "modified_by": "Administrator",
+ "module": "Texcity Construction",
+ "name": "Accounts",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 31.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Journal Entry",
+   "link_to": "Journal Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "General Ledger",
+   "link_to": "General Ledger",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Accounts Receivable",
+   "link_to": "Accounts Receivable",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "Tree",
+   "label": "Chart Of Account",
+   "link_to": "Account",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Accounts Payable",
+   "link_to": "Accounts Payable",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Project",
+   "link_to": "Project",
+   "type": "DocType"
+  }
+ ],
+ "title": "Accounts"
+}

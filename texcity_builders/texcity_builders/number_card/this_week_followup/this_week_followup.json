@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "",
- "color": "#39E4A5",
+ "color": "#B4CD29",
  "creation": "2023-02-27 12:53:19.885386",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "This Week followup",
- "modified": "2023-02-27 12:58:56.717579",
+ "modified": "2023-02-27 15:54:39.397724",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "This Week followup",
