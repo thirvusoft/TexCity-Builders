@@ -5,7 +5,7 @@ def warehouse_creation(doc,event):
         warehouse=frappe.new_doc("Warehouse")
         warehouse.warehouse_name=doc.project_name
         warehouse.is_group=doc.is_group
-        warehouse.parent_project=doc.parent_project
+        warehouse.parent_warehouse=doc.parent_project
         warehouse.company=doc.company
         warehouse.save(ignore_permissions = True)
     else:
