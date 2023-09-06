@@ -30,7 +30,8 @@ app_include_js = ["assets/texcity_builders/js/lead_management_quick_entry.js", "
 
 # include js in doctype views
 doctype_js = {
-    "Contact" : "texcity_builders/custom/js/contact.js"
+    "Contact" : "texcity_builders/custom/js/contact.js",
+	"Project" : "texcity_construction/custom/js/project.js"
     }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -104,13 +105,12 @@ after_install = "texcity_builders.install.after_install"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Project": {
+		"validate": "texcity_builders.texcity_construction.custom.py.project.warehouse_creation",
+		
+	}
+}
 
 # Scheduled Tasks
 # ---------------
