@@ -26,6 +26,10 @@
    "width": "Half"
   },
   {
+   "chart": "Site wise Lead count",
+   "width": "Half"
+  },
+  {
    "chart": "Lead Status",
    "width": "Half"
   },
@@ -53,7 +57,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2023-02-27 15:30:25.481420",
+ "modified": "2023-02-27 15:53:30.042088",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Owner Dashboard",

@@ -9,6 +9,7 @@
   "date",
   "followed_by",
   "next_follow_up_date",
+  "next_followup_by",
   "status",
   "site",
   "mode_of_communication",
@@ -47,7 +48,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nNo Response\nYet To Visit\nBooked\nRegistered"
+   "options": "\nPhone Enquiry\nSite Visited\nRe Follow Up\nDo Not Contact\nNo Response\nYet To Visit\nBooked\nRegistered\nNo Idea\nLoan Follow Up\nJust Enquiry\nOnly Message\nCall Busy"
   },
   {
    "fieldname": "next_follow_up_date",
@@ -63,12 +64,19 @@
    "in_list_view": 1,
    "label": "Site",
    "options": "Site"
+  },
+  {
+   "fieldname": "next_followup_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Next Follow up By",
+   "options": "Users List"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-02-18 12:40:42.047843",
+ "modified": "2023-03-23 17:09:26.926515",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Follow Ups",

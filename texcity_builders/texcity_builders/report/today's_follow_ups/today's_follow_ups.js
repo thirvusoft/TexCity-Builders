@@ -5,6 +5,12 @@
 frappe.query_reports["Today's Follow Ups"] = {
 	"filters": [
 		{
+			fieldname:'follow_date',
+			label:'Follow Up Date',
+			fieldtype:'Date',
+			default:'Today'
+		},
+		{
 			fieldname:'site',
 			label:'Site',
 			fieldtype:'Link',
@@ -12,10 +18,16 @@ frappe.query_reports["Today's Follow Ups"] = {
 			filters:{'sold_out':0, 'disabled':0}
 		},
 		{
-			fieldname:'follow_date',
-			label:'Follow Up Date',
-			fieldtype:'Date',
-			default:'Today'
+			fieldname:'follow_up_by',
+			label:'Follow Up By',
+			fieldtype:'Link',
+			options:'Users List'
+		},
+		{
+			fieldname:'show_unassigned_lead',
+			label:'Show Unassigned Lead',
+			fieldtype:'Check',
+			default:1
 		}
 	]
 };

@@ -1,5 +1,5 @@
 {
- "color": "#29CD42",
+ "color": "#CB2929",
  "creation": "2023-02-27 15:27:41.349495",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -10,7 +10,7 @@
  "is_public": 0,
  "is_standard": 1,
  "label": "Today followups",
- "modified": "2023-02-27 15:40:41.289821",
+ "modified": "2023-02-27 15:54:15.578341",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Today followups",

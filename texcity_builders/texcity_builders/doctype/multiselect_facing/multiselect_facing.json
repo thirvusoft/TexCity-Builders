@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-03-03 11:03:19.393350",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "facing"
+ ],
+ "fields": [
+  {
+   "fieldname": "facing",
+   "fieldtype": "Link",
+   "label": "Facing",
+   "options": "Facing"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-03 11:03:19.393350",
+ "modified_by": "Administrator",
+ "module": "Texcity Builders",
+ "name": "Multiselect Facing",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

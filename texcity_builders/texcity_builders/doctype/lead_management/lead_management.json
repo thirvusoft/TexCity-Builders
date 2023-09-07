@@ -153,7 +153,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nNo Response\nPhone Enquiry\nSite Visited\nRe Follow Up"
+   "options": "Open\nInterested\nYet To Visit\nMissed\nBooked\nRegistered\nDo Not Contact\nNo Response\nPhone Enquiry\nSite Visited\nRe Follow Up\nNo Idea\nLoan Follow Up\nJust Enquiry\nOnly Message\nCall Busy"
   },
   {
    "allow_in_quick_entry": 1,
@@ -166,9 +166,9 @@
    "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "facing",
-   "fieldtype": "Select",
+   "fieldtype": "Table MultiSelect",
    "label": "Facing",
-   "options": "E\nW\nN\nS\nNE\nSE\nNW\nSW"
+   "options": "Multiselect Facing"
   },
   {
    "allow_in_quick_entry": 1,
@@ -368,7 +368,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-02-27 15:04:24.200631",
+ "modified": "2023-03-27 16:56:14.758503",
  "modified_by": "Administrator",
  "module": "Texcity Builders",
  "name": "Lead Management",
@@ -444,6 +444,26 @@
   {
    "color": "Orange",
    "title": "Re Follow Up"
+  },
+  {
+   "color": "Light Blue",
+   "title": "No Idea"
+  },
+  {
+   "color": "Green",
+   "title": "Loan Follow Up"
+  },
+  {
+   "color": "Purple",
+   "title": "Just Enquiry"
+  },
+  {
+   "color": "Light Blue",
+   "title": "Only Message"
+  },
+  {
+   "color": "Green",
+   "title": "Call Busy"
   }
  ],
  "track_changes": 1,
