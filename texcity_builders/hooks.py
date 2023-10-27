@@ -33,7 +33,7 @@ doctype_js = {
     "Contact" : "texcity_builders/custom/js/contact.js",
 	"Project" : "texcity_construction/custom/js/project.js"
     }
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Employee Checkin" : "/texcity_builders/custom/js/employee_checkin_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -117,7 +117,8 @@ doc_events = {
 
 scheduler_events = {
 	"all": [
-		"frappe.integrations.doctype.google_contacts.google_contacts.sync"
+		"frappe.integrations.doctype.google_contacts.google_contacts.sync",
+        "texcity_builders.texcity_builders.custom.py.location.get_current_location"
 	],
 }
 #	"daily": [
