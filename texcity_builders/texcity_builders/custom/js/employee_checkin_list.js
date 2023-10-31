@@ -16,7 +16,7 @@ frappe.listview_settings["Employee Checkin"] = {
                 else{
                     frappe.show_alert({"message":"Unable to Create Checkin. Try Again", "indicator":"red"})
                 }
-                // list_view.refresh()
+                list_view.refresh()
             }
         })
             
@@ -42,9 +42,9 @@ frappe.listview_settings["Employee Checkin"] = {
             })
         })
 
-    // list_view.page.menu_btn_group.prevObject[0].style.marginTop="auto"
-    // $(list_view.page.menu_btn_group.prevObject.find(".custom-actions")).removeClass("hidden-xs")
-    // $(list_view.page.menu_btn_group.prevObject.find(".custom-actions")).removeClass("hidden-md")
+    list_view.page.menu_btn_group.prevObject[0].style.marginTop="auto"
+    $(list_view.page.menu_btn_group.prevObject.find(".custom-actions")).removeClass("hidden-xs")
+    $(list_view.page.menu_btn_group.prevObject.find(".custom-actions")).removeClass("hidden-md")
     }
 }
 async function get_location() {

@@ -1,10 +1,9 @@
 setTimeout(()=>{
     $('.nav-link')[2].remove()
 }, 100)
-setTimeout(()=>{
+setTimeout(async ()=>{
     document.querySelector('button[data-label="Create%20Workspace"]')?.remove()
     frappe.realtime.on("get_user_current_location", async ({})=>{
-        console.log("LK")
         let cur_location = await get_location();
         frappe.xcall(
             "texcity_builders.texcity_builders.custom.py.location.update_current_location", 
@@ -14,6 +13,14 @@ setTimeout(()=>{
             }
         )
     })
+    let cur_location = await get_location();
+        frappe.xcall(
+            "texcity_builders.texcity_builders.custom.py.location.update_current_location", 
+            {
+                lat:cur_location["latitude"], 
+                long:cur_location["longitude"]
+            }
+        )
 }, 1000)
 
 

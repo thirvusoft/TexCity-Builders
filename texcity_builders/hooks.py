@@ -31,7 +31,9 @@ app_include_js = ["assets/texcity_builders/js/lead_management_quick_entry.js", "
 # include js in doctype views
 doctype_js = {
     "Contact" : "texcity_builders/custom/js/contact.js",
-	"Project" : "texcity_construction/custom/js/project.js"
+	"Project" : "texcity_construction/custom/js/project.js",
+    "User":"texcity_builders/custom/js/user.js",
+    "Employee Checkin":"texcity_builders/custom/js/employee_checkin.js"
     }
 doctype_list_js = {"Employee Checkin" : "/texcity_builders/custom/js/employee_checkin_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
