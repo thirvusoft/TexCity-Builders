@@ -111,6 +111,14 @@ doc_events = {
 	"Project": {
 		"validate": "texcity_builders.texcity_construction.custom.py.project.warehouse_creation",
 		
+	},
+	"Purchase Invoice":{
+		"on_submit":"texcity_builders.texcity_builders.custom.py.purchase_invoice.project_value_updation",
+		"on_cancel":"texcity_builders.texcity_builders.custom.py.purchase_invoice.project_value_reduction"
+	},
+	"Sales Invoice":{
+		"on_submit":"texcity_builders.texcity_builders.custom.py.sales_invoice.project_value_updation_si",
+		"on_cancel":"texcity_builders.texcity_builders.custom.py.sales_invoice.project_value_reduction_si"
 	}
 }
 
