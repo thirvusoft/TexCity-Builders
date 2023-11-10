@@ -1,11 +1,6 @@
 {
- "charts": [
-  {
-   "chart_name": "Profit and Loss",
-   "label": "Profit and Loss"
-  }
- ],
- "content": "[{\"id\":\"_OD8Lx1Wlu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Profit and Loss\",\"col\":12}},{\"id\":\"NP26R_G5Io\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Accounts</span>\",\"col\":12}},{\"id\":\"F84qa0Fdet\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"aHlNBbGp_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"u0fM7lfffH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chart Of Account\",\"col\":3}},{\"id\":\"9i8TlUyyE4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Payable\",\"col\":3}},{\"id\":\"YjoTCQZbK_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Receivable\",\"col\":3}},{\"id\":\"Xn26nTFx5C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"General Ledger\",\"col\":3}},{\"id\":\"ltlWZkSKsX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"xl6MXsurie\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales GST Reports\",\"col\":4}},{\"id\":\"uDTz0xTvCc\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase GST Reports\",\"col\":4}},{\"id\":\"UwV_D4f0jM\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Statements\",\"col\":4}}]",
+ "charts": [],
+ "content": "[{\"id\":\"NP26R_G5Io\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Accounts</span>\",\"col\":12}},{\"id\":\"F84qa0Fdet\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"aHlNBbGp_j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"u0fM7lfffH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chart Of Account\",\"col\":3}},{\"id\":\"9i8TlUyyE4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Payable\",\"col\":3}},{\"id\":\"YjoTCQZbK_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Receivable\",\"col\":3}},{\"id\":\"Xn26nTFx5C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"General Ledger\",\"col\":3}},{\"id\":\"ltlWZkSKsX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"xl6MXsurie\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales GST Reports\",\"col\":4}},{\"id\":\"uDTz0xTvCc\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase GST Reports\",\"col\":4}},{\"id\":\"UwV_D4f0jM\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Statements\",\"col\":4}}]",
  "creation": "2023-08-29 12:05:02.601156",
  "custom_blocks": [],
  "docstatus": 0,
@@ -142,7 +137,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-30 17:15:46.027735",
+ "modified": "2023-11-07 11:38:11.307424",
  "modified_by": "Administrator",
  "module": "Texcity Construction",
  "name": "Accounts",
